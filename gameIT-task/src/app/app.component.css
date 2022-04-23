@@ -1,0 +1,57 @@
+body {
+    background-color: #eee
+}
+.row{
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+}
+b{
+    font-weight: 500;
+    color: #969aa0;
+}
+.section-title{
+    color: #abb0b8;
+}
+.section-title p{
+    font-size: 15px;
+}
+.card {
+    border: 3px solid #f69938;
+    border-radius: 10px;
+    padding: 17px;
+    text-align: center;
+    color: #a0a7b4;
+    height: 62vh;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card .card-body p{
+    font-weight: bold;
+}
+.card .card-body h6{
+    font-weight:lighter;
+}
+
+/* Modal Css */
+.modal-header {
+    border: none;
+    padding: 10px;
+}
+
+.modal-content{
+    border: 3px solid #f69938;
+    border-radius: 10px;
+    color: #a0a7b4;
+
+}
+@media(min-width: 576px){
+.modal-dialog {
+    max-width: 1046px;
+    margin: 6.75rem auto;
+}
+}

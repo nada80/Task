@@ -1,0 +1,72 @@
+<div class="container mt-5 mb-3">
+  <div class="row section-title">
+    <h2>
+      Our Games
+    </h2>
+    <p>
+      Please select a game for details.
+    </p>
+  </div>
+  <div class="row">
+
+    <div class="col-lg-4 col-md-6" *ngFor="let item of gameList; let i= index; trackBy: trackByFn">
+      <a (click)="getAllDetails(item.id ,item.title , item.description , item.skill , item.levels)"
+        data-bs-toggle="modal" href="#exampleModalToggle" style="cursor: pointer;font-weight: bold;">
+        <div class="card p-3 mb-2">
+          <img src="../assets/img/game_{{item.id}}.png" class="card-img-top" alt="...">
+
+          <div class="card-body">
+            <h5 class="card-title">Game {{item.id}}</h5>
+            <p class="card-text">
+              "{{item.title}}"
+            </p>
+            <h6 class="card-text">
+              Attention and Listening
+            </h6>
+
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="../assets/img/game_{{gameId}}.png" class="card-img-top" alt="...">
+
+          </div>
+          <div class="col-md-7">
+            <h5>"{{gameTitle}}"</h5>
+            <p>{{gameDesc}}</p>
+            <p><span><b>Skill:</b></span> Following the instructions<br>
+              {{gameSkill.description}}</p>
+            <p>
+              <span><b>Difficulty Levels:</b></span> {{Alllevel}}<br>
+              <span><b>Activities Total:</b></span> {{ActivityTotal}}<br>
+              <span><b>White Crystals Total:</b></span> {{WhiteCrystalsTotal}}
+
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
